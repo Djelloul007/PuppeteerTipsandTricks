@@ -144,3 +144,18 @@ async function run() {
     await browser.close();  
 }  
 run();  
+
+
+# setUser Agent
+const puppeteer = require('puppeteer');  
+async function run() {  
+    let browser = await puppeteer.launch({ headless: false });  
+    let page = await browser.newPage();  
+    await page.setViewport({ width: 1920, height: 1080 });  
+	await page.setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36")  
+    await page.goto('https://en.wikipedia.org/wiki/Main_Page');  
+    await page.waitFor(2000);  
+	await page.close();  
+    await browser.close();  
+}  
+run();  

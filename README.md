@@ -13,4 +13,19 @@ async function run() {
 	await page.close();   
     await browser.close();   
 }   
-run();   
+run();  
+
+# Generating PDF
+Generating PDF through Puppeteer is very simple.
+
+const puppeteer = require('puppeteer');  
+async function run() {  
+    let browser = await puppeteer.launch({ headless: true });  
+    let page = await browser.newPage();  
+    await page.setViewport({ width: 1920, height: 1080 });  
+    await page.goto('https://en.wikipedia.org/wiki/Main_Page');  
+    await page.pdf({path: 'mypdf.pdf', format: 'A4'});  
+	await page.close();  
+    await browser.close();  
+}  
+run();  

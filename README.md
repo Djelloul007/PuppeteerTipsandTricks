@@ -3,8 +3,7 @@
 # Taking Screenshots
 Taking screenshots through Puppeteer is a quite easy mission.
 
-const puppeteer = require('puppeteer');
-
+const puppeteer = require('puppeteer');  
 async function run() {  
     let browser = await puppeteer.launch({ headless: true });   
     let page = await browser.newPage();   

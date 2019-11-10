@@ -1,4 +1,4 @@
-# Puppeteer Tips and Tricks
+# Puppeteer (chrome headless) Tips and Tricks
 
 # Taking Screenshots
 Taking screenshots through Puppeteer is a quite easy mission.
